@@ -59,12 +59,12 @@ A **build system** allows you to compile and run your code directly inside Subli
 6. Go to **Tools → Build System → New Build System**.
 7. Replace the content with:
   ```json
-      {
-        "cmd" : ["g++-10 $file_name -o $file_base_name && gtimeout 2s ./$file_base_name<input.txt>output.txt"], 
-        "selector" : "source.c",
-        "shell": true,
-        "working_dir" : "$file_path"
-      }
+{
+   "cmd" : ["/opt/homebrew/bin/g++-14 $file_name -o $file_base_name && /opt/homebrew/bin/gtimeout 2s ./$file_base_name<input.txt>output.txt"], 
+   "selector" : "source.c",
+   "shell": true,
+   "working_dir" : "$file_path",
+}
    ```
 8. Save it as **C++17 Build.sublime-build**.
 8. Note: We are setting the program timeout to 2 seconds means, program will be auto terminated after 2 secs. It will help to avoid forever execution of programs.
@@ -73,10 +73,10 @@ A **build system** allows you to compile and run your code directly inside Subli
 Same steps, just use following snippet:
 ```json
 {
-"cmd" : ["g++ -std=c++14 $file_name -o $file_base_name && timeout 2s ./$file_base_name<input.txt>output.txt"], 
-"selector" : "source.c",
-"shell": true,
-"working_dir" : "$file_path"
+   "cmd" : ["g++ -std=c++14 $file_name -o $file_base_name && timeout 2s ./$file_base_name<input.txt>output.txt"], 
+   "selector" : "source.c",
+   "shell": true,
+   "working_dir" : "$file_path"
 }
 ```
 
