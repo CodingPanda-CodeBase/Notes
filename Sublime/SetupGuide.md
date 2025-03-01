@@ -26,10 +26,11 @@ Here is a step by step guide to setup sublime for competitive programming using 
 A **build system** allows you to compile and run your code directly inside Sublime.
 
 ### For Windows
-1. Open **Sublime Text** and go to **Tools → Build System → New Build System**.
+1. Open Sublime Text
 2. Create code.cpp, input.txt and output.txt in same folder
 3. Follow video to adjust the code writing, input and output sections <LINK>
-4. Windows: Replace the content with:
+4. Go to **Tools → Build System → New Build System**.
+5. Replace the content with:
    ```json
     {
         "cmd": [
@@ -43,19 +44,20 @@ A **build system** allows you to compile and run your code directly inside Subli
         "file_regex": "^(.*?):(\\d+):(\\d+):\\s*(.*)$"
     }
    ```
-5. Save it as **C++17 Build.sublime-build**.
-6. Now, press **Ctrl + B** to compile & run C++ files
+6. Save it as **C++17 Build.sublime-build**.
+7. Now, press **Ctrl + B** to compile & run C++ files
 
 ### For MacOS
 1. To install compiler
-  1. Install home brew: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" ( official site: https://brew.sh/)
-  2. Add path: export PATH=/opt/homebrew/bin:$PATH    
-  1. brew install gcc
-  2. brew install coreutils (for adding timeout functionality)
-3. Open **Sublime Text** and go to **Tools → Build System → New Build System**.
+   1. Install home brew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" ( official site: https://brew.sh/)`
+   2. Add path: `export PATH=/opt/homebrew/bin:$PATH`    
+   1. `brew install gcc`
+   2. `brew install coreutils` (for adding timeout functionality)
+3. Open **Sublime Text** and 
 4. Create code.cpp, input.txt and output.txt in same folder
 5. Follow video to adjust the code writing, input and output sections <LINK>
-6. For macOS:
+6. Go to **Tools → Build System → New Build System**.
+7. Replace the content with:
   ```json
       {
         "cmd" : ["g++-10 $file_name -o $file_base_name && gtimeout 2s ./$file_base_name<input.txt>output.txt"], 
@@ -64,7 +66,8 @@ A **build system** allows you to compile and run your code directly inside Subli
         "working_dir" : "$file_path"
       }
    ```
-5. Note: we are setting the program timeout to 2 seconds means, program will be auto terminated after 2 secs. It will help to avoid forever execution of programs.
+8. Save it as **C++17 Build.sublime-build**.
+8. Note: We are setting the program timeout to 2 seconds means, program will be auto terminated after 2 secs. It will help to avoid forever execution of programs.
 
 ### For Linux
 Same steps, just use following snippet:
@@ -78,7 +81,7 @@ Same steps, just use following snippet:
 ```
 
 
-## 🎯 5. Useful Shortcuts for Competitive Programming (Windows & Linux)
+## 5. Useful Shortcuts for Competitive Programming (Windows & Linux)
 | **Shortcut**  | **Action** |
 |--------------|-----------|
 | `Ctrl + B` | Build & Run Code |
@@ -88,7 +91,7 @@ Same steps, just use following snippet:
 | `Ctrl + /` | Toggle Comment |
 | `Ctrl + Shift + ↑/↓` | Move Line Up/Down |
 
-## 🎯 6. Useful Shortcuts for Competitive Programming (Mac)  
+## 6. Useful Shortcuts for Competitive Programming (Mac)  
 | **Shortcut**  | **Action** |
 |--------------|-----------|
 | `Cmd + B` | Build & Run Code |
@@ -98,7 +101,7 @@ Same steps, just use following snippet:
 | `Cmd + /` | Toggle Comment |
 | `Cmd + Ctrl + ↑/↓` | Move Line Up/Down |
 
-## 🔥 **6. Optimize Sublime for Fast Coding**
+## **6. Optimize Sublime for Fast Coding**
 1. **Enable Auto Save:**  
    - Go to **Preferences → Settings** and add:  
      ```json
@@ -110,9 +113,10 @@ Same steps, just use following snippet:
      "index_files": false
      ```
 
-🚀 **Happy Coding & Good Luck for Competitions!** 🎯
 
 Add your comments on youtube video if you are facing any issues: <LINK>
- 
+
+**Happy Coding & Good Luck for your Competitions!**
+
 ## ☕Support:
 <p><a href="https://www.buymeacoffee.com/anshaj_sharma"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="anshaj_sharma" /></a></p>
